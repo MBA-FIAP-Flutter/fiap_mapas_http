@@ -25,7 +25,25 @@ class _ListTrucksState extends State<ListTrucks> {
 
   @override
   Widget build(BuildContext context) {
-    …
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Veículos"),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.map),
+            onPressed: () {
+              Navigator.pushNamed(context, "/mapa", arguments: listPositions);
+            },
+          ),
+        ],
+      ),
+      body: listPositions == null || listPositions.positions.length == 0 ?
+      LinearProgressIndicator() : ListView.separated(
+          itemBuilder: (context, index) => buildListItem(listPositions.positions[index]),
+          separatorBuilder: (context, index) => Divider(height: 1),
+          itemCount: listPositions.positions.length
+      ),
+    );
   }
 
   Widget buildListItem(Position position){
