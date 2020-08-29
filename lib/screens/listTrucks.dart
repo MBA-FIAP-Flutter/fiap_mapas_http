@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fiap_aula_http_mapas/model/listPositions.dart';
 import 'package:flutter_fiap_aula_http_mapas/model/position.dart';
 import 'package:flutter_fiap_aula_http_mapas/service/endpoints.dart';
+import 'package:flutter_fiap_aula_http_mapas/widgets/listItem.dart';
 
 class ListTrucks extends StatefulWidget {
   @override
