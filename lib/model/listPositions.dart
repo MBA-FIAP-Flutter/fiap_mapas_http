@@ -1,4 +1,4 @@
-import 'package:flutter_fiap_aula_http_mapas/widgets/listItem.dart';
+import 'package:flutter_fiap_aula_http_mapas/model/position.dart';
 
 class ListPositions {
 
